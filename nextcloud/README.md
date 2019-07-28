@@ -1,6 +1,6 @@
 # Nextcloud
 
-Since the few last version of nextcloud server (v15, v16), I can synchronize my files correctly with the desktop app.
+Since the few last version of nextcloud server (v15, v16), I can't synchronize my files correctly with the desktop app.
 So I reinstalled an older version that worked with the previous auth system. This auth system seems to still be present in the latest servers.
 So this version running in docker still works. Yay.
 
