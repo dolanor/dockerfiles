@@ -8,13 +8,23 @@ So this version running in docker still works. Yay.
 
 ```
 docker run -d --name nextcloud \
-# save the config in some persistent directory
 -v ~/var/nextcloud:/root/.local/share/data/Nextcloud \
-# the directory that you're really gonna synchronize
 -v ~/cloud:/data \
-# some various environment + volumes for making it work with host X11 server
 -e DISPLAY=unix$DISPLAY -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix \
 dolanor/nextcloud:2.3.2-utf8 nextcloud
+```
+
+## Explanations of parameters
+
+```
+# save the config in some persistent directory
+-v ~/var/nextcloud:/root/.local/share/data/Nextcloud
+
+# the directory that you are really gonna synchronize
+-v ~/cloud:/data
+
+# some various environment + volumes for making it work with host X11 server
+-e DISPLAY=unix$DISPLAY -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix
 ```
 
 # Launching the UI
