@@ -14,7 +14,7 @@ docker run -d --name nextcloud \
 -v ~/cloud:/data \
 # some various environment + volumes for making it work with host X11 server
 -e DISPLAY=unix$DISPLAY -v /etc/localtime:/etc/localtime:ro -v /tmp/.X11-unix:/tmp/.X11-unix \
-nextcloud:2.3.2-utf8 nextcloud
+dolanor/nextcloud:2.3.2-utf8 nextcloud
 ```
 
 # Launching the UI
